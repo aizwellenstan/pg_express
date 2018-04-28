@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "tcwtjicy",
+    "password": "moyRtDwlAinZDZImlNPw_CQu6iI7rVCg",
+    "database": "tcwtjicy",
+    "host": "tantor.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "bdMateus": {
+    "username": "muxaofbb",
+    "password": "gWrn1GChIBY6YQprMQjf6Nibzstp0u6o",
+    "database": "muxaofbb",
+    "host": "nutty-custard-apple.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
