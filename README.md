@@ -3,7 +3,8 @@ Sistema feito com base no tutorial encontrado no site [scotch.io](https://scotch
 
 Para executar o sistema execute o seguinte comando no terminal:
 
- 
+*npm i*  
+
 *npm run start* 
 
 
