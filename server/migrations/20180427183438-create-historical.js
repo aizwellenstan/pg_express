@@ -10,7 +10,7 @@ module.exports = {
       ObjectId: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true
+        unique: true,
       },
       createdAt: {
         allowNull: false,

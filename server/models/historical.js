@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   Historical.associate = (models) => {
     Historical.hasMany(models.Attribute, {
       foreignKey: 'historicalId',
+      sourceKey: 'ObjectId',
       as: 'Attributes',
     });
   };

@@ -24,11 +24,11 @@ module.exports = {
         type: Sequelize.DATE,
       },
       historicalId: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         onDelete: 'CASCADE',
         references: {
           model: 'Historicals',
-          key: 'id',
+          key: 'ObjectId',
           as: 'historicalId',
         },
       },

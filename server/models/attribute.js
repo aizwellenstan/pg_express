@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   Attribute.associate = (models) => {
     Attribute.belongsTo(models.Historical, {
       foreignKey: 'historicalId',
+      targetKey: 'ObjectId',
       onDelete: 'CASCADE',
     });
   };
