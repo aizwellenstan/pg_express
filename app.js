@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
+const port = 3000
 
 // Set up the express app
 const app = express();
@@ -16,10 +17,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require("./server/routes")(app);
 
 // Setup a default catch-all route that sends back a welcome message in JSON format.
-app.get("*", (req, res) =>
+app.get("/", (req, res) =>
   res.status(200).send({
     message: "Welcome to the beginning of nothingness."
   })
 );
 
-module.exports = app;
+app.listen(port, (req,res) => {
+  console.log(`app is running on ${port}`)
+})
