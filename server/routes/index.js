@@ -1,29 +1,28 @@
-const todosController = require("../controllers").todos;
+const historicalsController = require("../controllers").historicals;
 //Não deixa explicito no tutorial a adição da linha abaixo
-const todoItemsController = require("../controllers").todoItems;
+const attributesController = require("../controllers").attributes;
 
 module.exports = app => {
   app.get("/api", (req, res) =>
     res.status(200).send({
-      message: "Welcome to the Todos API!"
+      message: "Welcome to the Historicals API!"
     })
   );
 
-  app.post("/api/todos", todosController.create);
-  app.get("/api/todos", todosController.list);
-  app.get("/api/todos/:todoId", todosController.retrieve);
-  app.put("/api/todos/:todoId", todosController.update);
-  app.delete("/api/todos/:todoId", todosController.destroy);
+  app.post("/api/historicals", historicalsController.create);
+  app.get("/api/historicals", historicalsController.list);
+  app.get("/api/historicals/:historicalId", historicalsController.retrieve);
+  app.put("/api/historicals/:historicalId", historicalsController.update);
+  app.delete("/api/historicals/:historicalId", historicalsController.destroy);
 
-  app.post("/api/todos/:todoId/items", todoItemsController.create);
-  app.put("/api/todos/:todoId/items/:todoItemId", todoItemsController.update);
+  app.post("/api/historicals/:historicalId/attributes", attributesController.create);
+  app.put("/api/historicals/:historicalId/attributes/:attributeId", attributesController.update);
   app.delete(
-    "/api/todos/:todoId/items/:todoItemId",
-    todoItemsController.destroy
+    "/api/historicals/:historicalId/attributes/:attributeId",
+    attributesController.destroy
   );
 
-  // For any other request method on todo items, we're going to return "Method Not Allowed"
-  app.all("/api/todos/:todoId/items", (req, res) =>
+  app.all("/api/historicals/:historicalId/attributes", (req, res) =>
     res.status(405).send({
       message: "Method Not Allowed"
     })

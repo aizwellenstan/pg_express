@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "tcwtjicy",
-    "password": "moyRtDwlAinZDZImlNPw_CQu6iI7rVCg",
-    "database": "tcwtjicy",
-    "host": "tantor.db.elephantsql.com",
+    "username": "nadi",
+    "password": "Nadi1234;",
+    "database": "historical",
+    "host": "localhost",
     "dialect": "postgres"
   },
   "test": {

@@ -1,8 +1,7 @@
-const todos = require("./todo");
-//Não deixa explicito no tutorial a adição da linha abaixo
-const todoItems = require("./todoitems");
+const historicals = require("./historical");
+const attributes = require("./attributes");
 
 module.exports = {
-  todos,
-  todoItems
+  historicals,
+  attributes
 };
