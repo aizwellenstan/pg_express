@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Historical = sequelize.define('Historical', {
-    title: {
+    ObjectId: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   Historical.associate = (models) => {
     Historical.hasMany(models.Attribute, {
       foreignKey: 'historicalId',
-      as: 'attributes',
+      as: 'Attributes',
     });
   };
 

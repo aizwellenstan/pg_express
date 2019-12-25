@@ -4,7 +4,7 @@ const Attribute = require("../models").Attribute;
 module.exports = {
   create(req, res) {
     return Historical.create({
-      title: req.body.title
+      ObjectId: req.body.ObjectId
     })
       .then(historical => res.status(201).send(historical))
       .catch(error => res.status(400).send(error));
@@ -14,7 +14,7 @@ module.exports = {
       include: [
         {
           model: Attribute,
-          as: "attributes"
+          as: "Attributes"
         }
       ]
     })
@@ -26,7 +26,7 @@ module.exports = {
       include: [
         {
           model: Attribute,
-          as: "attributes"
+          as: "Attributes"
         }
       ]
     })
@@ -45,7 +45,7 @@ module.exports = {
       include: [
         {
           model: Attribute,
-          as: "attributes"
+          as: "Attributes"
         }
       ]
     })
@@ -57,7 +57,7 @@ module.exports = {
         }
         return historical
           .update({
-            title: req.body.title || historical.title
+            ObjectId: req.body.ObjectId || historical.ObjectId
           })
           .then(() => res.status(200).send(historical))
           .catch(error => res.status(400).send(error));

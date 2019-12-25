@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
   const Attribute = sequelize.define('Attribute', {
-    content: {
+    Value: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    complete: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
+    Timestamp: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
   });
 

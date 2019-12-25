@@ -7,13 +7,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      content: {
+      Value: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      complete: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
+      Timestamp: {
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,

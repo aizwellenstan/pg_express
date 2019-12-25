@@ -3,7 +3,8 @@ const Attribute = require("../models").Attribute;
 module.exports = {
   create(req, res) {
     return Attribute.create({
-      content: req.body.content,
+      Value: req.body[0]['Value'],
+      Timestamp: Math.floor(Date.now() / 1000),
       historicalId: req.params.historicalId
     })
       .then(attribute => res.status(201).send(attribute))
@@ -25,8 +26,8 @@ module.exports = {
 
         return attribute
           .update({
-            content: req.body.content || attribute.content,
-            complete: req.body.complete || attribute.complete
+            Value: req.body.Value || attribute.Value,
+            Timestamp: req.body.Timestamp || attribute.Timestamp
           })
           .then(updatedAttribute => res.status(200).send(updatedAttribute))
           .catch(error => res.status(400).send(error));
