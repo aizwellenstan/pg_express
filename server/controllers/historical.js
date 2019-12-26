@@ -16,7 +16,14 @@ module.exports = {
           model: Attribute,
           as: "Attributes"
         }
-      ]
+      ],
+      order: [
+        [
+            { model: Attribute, as: 'Attributes' },
+            'id',
+            'DESC',
+        ],
+    ],
     })
       .then(historicals => res.status(200).send(historicals))
       .catch(error => res.status(400).send(error));
