@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
-const port = 3000
+const port = 3001
 
 // Set up the express app
 const app = express();
